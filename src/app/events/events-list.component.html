@@ -1,0 +1,12 @@
+<div>
+  <h1>Upcoming angular Events</h1>
+  <hr/>
+ <!-- <event-thumbnail (eventClick)="handleEventClicked($event)" [eventInput]="eventValue"></event-thumbnail> -->
+ <!-- <event-thumbnail #thumbnail [eventInput]="eventValue"></event-thumbnail>
+  <button class="btn btn-primary" (click)="thumbnail.logFoo()">print logFoo</button>--><!-- calling logFoo using Template variable created #thumbnail in above line-->
+  <div class="row">
+    <div class="col-md-5" *ngFor="let eventValue of events" >
+      <event-thumbnail [eventInput]="eventValue" (click)="toastMessage(eventValue.name)"></event-thumbnail>
+    </div>
+  </div>
+</div>
