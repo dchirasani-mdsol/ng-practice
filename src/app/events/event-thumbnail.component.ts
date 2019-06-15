@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {IEvent} from './shared';
 
 @Component({
   selector: 'event-thumbnail',
@@ -31,7 +32,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   `]
 })
 export class EventThumbnailComponent {
- @Input() eventInput: any;
+ @Input() eventInput: IEvent;
  // @Output() eventClick = new EventEmitter();
  /*handleClickMe() {
    console.log('clicked!');
