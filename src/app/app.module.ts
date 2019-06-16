@@ -15,11 +15,14 @@ import {ToastrService} from './common/toastr-service.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import {Error404Component} from './error/404.component';
+import {FormsModule} from '@angular/forms';
+import {AuthService} from './user/auth.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   declarations: [
     EventsAppComponent,
@@ -28,13 +31,14 @@ import {Error404Component} from './error/404.component';
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
   ],
   providers: [
     EventService,
     ToastrService,
     EventRouteActivator,
     EventListResolver,
+    AuthService,
     {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
   ],
   bootstrap: [EventsAppComponent]
