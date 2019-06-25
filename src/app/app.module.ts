@@ -9,7 +9,9 @@ import {
   EventDetailsComponent,
   CreateEventComponent,
   EventRouteActivator,
-  EventListResolver, CreateSessionComponent
+  EventListResolver,
+  CreateSessionComponent,
+  SessionListComponent
 } from './events/index';
 import {NavbarComponent} from './nav/navbar.component';
 import {ToastrService} from './common/toastr-service.service';
@@ -35,7 +37,8 @@ import {ProfileRouteActivator} from './user/profile-route-activator.service';
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionListComponent
   ],
   providers: [
     EventService,
