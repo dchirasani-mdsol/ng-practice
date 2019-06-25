@@ -12,5 +12,4 @@ export class EventRouteActivator implements CanActivate {
     }
     return eventExists;
   }
-
 }

@@ -317,8 +317,15 @@ export class EventService {
     }, 100 );
     return subject;
   }
-  getEvent(id:number): IEvent {
+  getEvent(id: number): IEvent {
     return this.EVENTS.find(event => event.id === id);
+  }
+
+  saveEvent(event: IEvent) {
+    console.log(event);
+    event.id = 999;
+    event.sessions = [];
+    this.EVENTS.push(event);
   }
 
 }
