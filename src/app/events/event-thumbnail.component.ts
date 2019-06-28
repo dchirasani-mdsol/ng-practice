@@ -4,8 +4,8 @@ import {IEvent} from './shared';
 @Component({
   selector: 'event-thumbnail',
   template: `<div class="well hoverwell thumbnail" [routerLink]="['/events',eventInput.id]">
-    <h2>{{eventInput?.name}}</h2>
-    <div> Date: {{eventInput?.date}}</div>
+    <h2>{{eventInput?.name | uppercase }}</h2>
+    <div> Date: {{eventInput?.date | date:'shortDate'}}</div>
     <div [ngSwitch]="eventInput?.time">
       <div>
         Time: {{eventInput?.time}}

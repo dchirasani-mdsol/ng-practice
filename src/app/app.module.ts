@@ -21,6 +21,7 @@ import {Error404Component} from './error/404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from './user/auth.service';
 import {ProfileRouteActivator} from './user/profile-route-activator.service';
+import {CollapsibleWellComponent} from './common/collapsible-well.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import {ProfileRouteActivator} from './user/profile-route-activator.service';
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleWellComponent
   ],
   providers: [
     EventService,

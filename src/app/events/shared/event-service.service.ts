@@ -329,7 +329,7 @@ export class EventService {
   }
 
   updateEvent(event: IEvent) {
-    const index = this.EVENTS.findIndex(x => x.id = event.id);
+    const index: number = this.EVENTS.findIndex(x => event.id === x.id );
     this.EVENTS[index] = event;
   }
 
