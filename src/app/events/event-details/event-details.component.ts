@@ -7,7 +7,9 @@ import {IEvent, ISession} from '../shared';
   selector: 'event-details',
   styles: [`
   .container { padding-left: 20px; padding-right: 20px;}
-  .event-image {height: 100px;}
+  .active { background-color: #f89406;}
+  .event-image { height: 100px; }
+  .spaced-button { margin: 2px; width: 90px;}
   a {cursor: pointer; }
   `],
   templateUrl: './event-details.component.html'
@@ -17,6 +19,9 @@ export class EventDetailsComponent implements OnInit {
   public constructor(private eventService: EventService, private route: ActivatedRoute) {}
   event: IEvent;
   addMode: boolean;
+  filterBy: string = 'all';
+  sortBy: string = 'name';
+
   ngOnInit() {
     this.event = this.eventService.getEvent(+this.route.snapshot.params.id);
   }
@@ -35,4 +40,5 @@ export class EventDetailsComponent implements OnInit {
   cancelAddSession() {
     this.addMode = false;
   }
+
 }

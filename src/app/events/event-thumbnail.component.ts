@@ -14,7 +14,7 @@ import {IEvent} from './shared';
         <span *ngSwitchDefault>(Normal Start)</span>
       </div>
     </div>
-    <div>Price: \${{eventInput.price}}</div>
+    <div>Price: {{eventInput.price | currency:'INR'}}</div>
     <div [hidden]="!eventInput?.location"><!-- Adding safe navigation in case if eventInput turns out to be null -->
       <span>Location : {{eventInput?.location?.address}}</span>
       <span class="pad-left"></span>
